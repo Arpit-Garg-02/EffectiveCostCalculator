@@ -19,7 +19,7 @@ package com.nagarro.taxcalculator.service;
 
 public class ImportedItemServiceImpl implements ServiceImpl {
     @Override
-    public double priceCalculation(double itemPrice, int itemQuantity) {
+    public double taxPriceCalculation(double itemPrice, int itemQuantity) {
         double importedTax = itemPrice * .01;
         if (importedTax <= 100) {
             importedTax += 5;
