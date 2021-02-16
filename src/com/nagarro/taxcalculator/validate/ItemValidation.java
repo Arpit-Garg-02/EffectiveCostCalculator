@@ -44,11 +44,9 @@ public class ItemValidation {
      * validate the price of the item
      */
     public void priceValidate(String price) {
-        boolean flag = false;
         try {
             Double.parseDouble(price);
         } catch (Exception e) {
-            flag = true;
             throw new InvalidItemException("Invalid input ! Item Price is a number.");
         }
     }
