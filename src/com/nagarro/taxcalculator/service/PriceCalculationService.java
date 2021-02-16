@@ -20,9 +20,9 @@ package com.nagarro.taxcalculator.service;
 import java.util.ArrayList;
 
 import com.nagarro.taxcalculator.item.Item;
-import com.nagarro.taxcalculator.service.itemtaxprice.ImportedItemServiceImpl;
-import com.nagarro.taxcalculator.service.itemtaxprice.ManufacturedItemServiceImpl;
-import com.nagarro.taxcalculator.service.itemtaxprice.RawItemServiceImpl;
+import com.nagarro.taxcalculator.service.impl.ImportedItemServiceImpl;
+import com.nagarro.taxcalculator.service.impl.ManufacturedItemServiceImpl;
+import com.nagarro.taxcalculator.service.impl.RawItemServiceImpl;
 
 public class PriceCalculationService {
     /**

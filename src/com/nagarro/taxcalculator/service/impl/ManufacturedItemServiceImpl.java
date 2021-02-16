@@ -15,7 +15,7 @@
 *
 * Description: Calculate the tax price for the manufactured item type
 */
-package com.nagarro.taxcalculator.service.itemtaxprice;
+package com.nagarro.taxcalculator.service.impl;
 
 import com.nagarro.taxcalculator.service.ServiceImpl;
 
