@@ -17,8 +17,6 @@
 */
 package com.nagarro.taxcalculator.validate;
 
-import java.util.ArrayList;
-
 import com.nagarro.taxcalculator.exception.InvalidItemException;
 
 public class ItemValidation {
@@ -26,9 +24,7 @@ public class ItemValidation {
      * validate the item name
      */
     public void compulsoryArgument(String itemInfo) {
-        boolean flag = false;
         if (itemInfo.isEmpty()) {
-            flag = true;
             throw new InvalidItemException("name option must be the first option !");
         }
     }

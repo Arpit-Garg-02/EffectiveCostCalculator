@@ -49,5 +49,4 @@ public class PriceCalculationService {
             item.setTaxPrice(taxPrice);
         }
     }
-
 }
