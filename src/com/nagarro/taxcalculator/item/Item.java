@@ -1,3 +1,20 @@
+/*
+* Class name: Item
+*
+* Version info: jdk 1.8
+*
+* Copyright notice:
+* 
+* Author info: Arpit Garg
+*
+* Creation date: 16/Feb/2021
+*
+* Last updated By: Arpit Garg
+*
+* Last updated Date: 16/Feb/2021
+*
+* Description: Details of an item
+*/
 package com.nagarro.taxcalculator.item;
 
 public class Item {
@@ -7,11 +24,11 @@ public class Item {
     private int quantity;
     private double taxPrice;
 
-    Item(String[] itemInfo) {
-        this.name = itemInfo[0];
-        this.price = Double.parseDouble(itemInfo[1]);
-        this.quantity = Integer.parseInt(itemInfo[2]);
-        this.itemType = itemInfo[3];
+    Item(String[] itemsInfo) {
+        this.name = itemsInfo[0];
+        this.price = Double.parseDouble(itemsInfo[1]);
+        this.quantity = Integer.parseInt(itemsInfo[2]);
+        this.itemType = itemsInfo[3];
     }
 
     public void setItemName(String name) {

@@ -1,3 +1,20 @@
+/*
+* Class name: ItemValidation
+*
+* Version info: jdk 1.8
+*
+* Copyright notice:
+* 
+* Author info: Arpit Garg
+*
+* Creation date: 16/Feb/2021
+*
+* Last updated By: Arpit Garg
+*
+* Last updated Date: 16/Feb/2021
+*
+* Description: validate the item information and generate the exception accordingly
+*/
 package com.nagarro.taxcalculator.validate;
 
 import java.util.ArrayList;
@@ -5,6 +22,9 @@ import java.util.ArrayList;
 import com.nagarro.taxcalculator.exception.InvalidItemException;
 
 public class ItemValidation {
+    /**
+     * validate the item name
+     */
     public void compulsoryArgument(String itemInfo) {
         boolean flag = false;
         if (itemInfo.isEmpty()) {
@@ -13,6 +33,9 @@ public class ItemValidation {
         }
     }
 
+    /**
+     * validate the quantity is an integer or not
+     */
     public void quantityValidate(String quantity) {
         try {
             Integer.parseInt(quantity);
@@ -21,6 +44,9 @@ public class ItemValidation {
         }
     }
 
+    /**
+     * validate the price of the item
+     */
     public void priceValidate(String price) {
         boolean flag = false;
         try {
@@ -31,6 +57,9 @@ public class ItemValidation {
         }
     }
 
+    /**
+     * validate the item type
+     */
     public void validateTypeOption(String itemType) {
         if (itemType == "") {
             throw new InvalidItemException("Type must be a value!");
