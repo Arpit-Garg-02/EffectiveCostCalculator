@@ -61,7 +61,7 @@ public class ItemValidation {
      * validate the item type
      */
     public void validateTypeOption(String itemType) {
-        if (itemType == "") {
+        if (itemType.isEmpty()) {
             throw new InvalidItemException("Type must be a value!");
         }
         switch (itemType) {

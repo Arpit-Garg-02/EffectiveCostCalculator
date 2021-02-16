@@ -23,7 +23,7 @@ import com.nagarro.taxcalculator.item.Item;
 
 public class PriceCalculationService {
 
-    public void gg(ArrayList<Item> itemsInfo) {
+    public void taxCalculation(ArrayList<Item> itemsInfo) {
         for (Item item : itemsInfo) {
             String type = item.getItemType();
             double itemsPrice = item.getItemPrice();
@@ -40,7 +40,7 @@ public class PriceCalculationService {
                 service = new ImportedItemServiceImpl();
                 break;
             }
-            double taxPrice = service.priceCalculation(itemsPrice, itemsQuantity);
+            double taxPrice = service.taxPriceCalculation(itemsPrice, itemsQuantity);
             item.setTaxPrice(taxPrice);
         }
     }

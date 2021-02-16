@@ -27,6 +27,9 @@ import com.nagarro.taxcalculator.validate.ItemValidation;
 public class ItemManager {
     public static ArrayList<Item> itemsInfo = new ArrayList<>();
 
+    /**
+     * Used for user input and validate the all inputs
+     */
     public void startManager() throws InvalidItemException {
         char ch;
         do {
@@ -71,7 +74,7 @@ public class ItemManager {
             ch = scan.next().charAt(0);
         } while (ch == 'y');
         PriceCalculationService priceCal = new PriceCalculationService();
-        priceCal.gg(itemsInfo);
+        priceCal.taxCalculation(itemsInfo);
         displayItems(itemsInfo);
     }
 
