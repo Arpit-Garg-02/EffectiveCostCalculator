@@ -20,9 +20,14 @@ package com.nagarro.taxcalculator.service;
 import java.util.ArrayList;
 
 import com.nagarro.taxcalculator.item.Item;
+import com.nagarro.taxcalculator.service.itemtaxprice.ImportedItemServiceImpl;
+import com.nagarro.taxcalculator.service.itemtaxprice.ManufacturedItemServiceImpl;
+import com.nagarro.taxcalculator.service.itemtaxprice.RawItemServiceImpl;
 
 public class PriceCalculationService {
-
+    /**
+     * Calculate the tax price according to the item type
+     */
     public void taxCalculation(ArrayList<Item> itemsInfo) {
         for (Item item : itemsInfo) {
             String type = item.getItemType();

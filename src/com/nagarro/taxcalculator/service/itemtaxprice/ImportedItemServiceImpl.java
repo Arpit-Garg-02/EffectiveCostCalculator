@@ -15,7 +15,9 @@
 *
 * Description: Calculate the tax price for the imported item type
 */
-package com.nagarro.taxcalculator.service;
+package com.nagarro.taxcalculator.service.itemtaxprice;
+
+import com.nagarro.taxcalculator.service.ServiceImpl;
 
 public class ImportedItemServiceImpl implements ServiceImpl {
     @Override
