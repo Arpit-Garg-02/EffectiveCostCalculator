@@ -63,6 +63,7 @@ public class ItemManager {
         System.out.printf("%10s %10s %15s %15s %15s %15s", "Name", "Price", "Quantity", "Type", "Sales Tax",
                 "Final Price");
         System.out.println();
+        System.out.println("--------------------------------------------------------------------------------------");
         for (Item item : itemsInfo) {
             System.out.printf("%10s %10s %15s %15s %15s %15s", item.getItemName(), item.getItemPrice(),
                     item.getItemQuantity(), item.getItemType(), item.getTaxPrice(), item.getTotalTax());
