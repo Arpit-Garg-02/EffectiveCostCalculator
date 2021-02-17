@@ -25,6 +25,14 @@ import com.nagarro.taxcalculator.service.ItemTaxPriceCalculation;
 import com.nagarro.taxcalculator.validate.ItemValidation;
 
 public class ItemManager {
+    private static final String RE_ENTER_TYPE_OF_ITEM_RAW_MANUFACTURED_IMPORTED = "Re-Enter type of item [ Raw , Manufactured , Imported ] : ";
+    private static final String ENTER_TYPE_OF_ITEM_RAW_MANUFACTURED_IMPORTED = "Enter type of item [ Raw , Manufactured , Imported ] : ";
+    private static final String RE_ENTER_QUANTITY_OF_ITEM = "Re-Enter quantity of item : ";
+    private static final String ENTER_QUANTITY_OF_ITEM = "Enter quantity of item : ";
+    private static final String RE_ENTER_PRICE_OF_ITEM = "Re-Enter price of item : ";
+    private static final String ENTER_PRICE_OF_ITEM = "Enter price of item : ";
+    private static final String RE_ENTER_NAME_OF_ITEM = "re-Enter name of item : ";
+    private static final String DO_YOU_WANT_TO_ENTER_DETAILS_OF_ANY_OTHER_ITEM_Y_N = "Do you want to enter details of any other item (y/n):";
     private static final String ENTER_NAME_OF_ITEM = "Enter name of item : ";
     private Scanner scan = new Scanner(System.in);
 
@@ -43,7 +51,7 @@ public class ItemManager {
             enterItemQuantity(item); // enter item quantity
             enterItemType(item); // enter item type
             itemsInfo.add(item);
-            System.out.println("Do you want to enter details of any other item (y/n):");
+            System.out.println(DO_YOU_WANT_TO_ENTER_DETAILS_OF_ANY_OTHER_ITEM_Y_N);
             ch = scan.next().charAt(0);
             scan.close();
         } while (ch == 'y');
@@ -88,7 +96,7 @@ public class ItemManager {
                 flag = false;
                 item.setItemName(name);
             } catch (InvalidItemException e) {
-                System.out.println("re-Enter name of item : ");
+                System.out.println(RE_ENTER_NAME_OF_ITEM);
                 flag = true;
             }
         }
@@ -100,7 +108,7 @@ public class ItemManager {
      * @param item
      */
     private void enterItemPrice(Item item) {
-        System.out.println("Enter price of item : ");
+        System.out.println(ENTER_PRICE_OF_ITEM);
         boolean flag = true;
         while (flag) {
             String price = scan.nextLine();
@@ -109,7 +117,7 @@ public class ItemManager {
                 flag = false;
                 item.setItemPrice(Double.parseDouble(price));
             } catch (InvalidItemException e) {
-                System.out.println("Re-Enter price of item : ");
+                System.out.println(RE_ENTER_PRICE_OF_ITEM);
                 flag = true;
             }
         }
@@ -122,7 +130,7 @@ public class ItemManager {
      */
     private void enterItemQuantity(Item item) {
         boolean flag = true;
-        System.out.println("Enter quantity of item : ");
+        System.out.println(ENTER_QUANTITY_OF_ITEM);
         while (flag) {
             String quantity = scan.nextLine();
             try {
@@ -130,7 +138,7 @@ public class ItemManager {
                 flag = false;
                 item.setItemQuantity(Integer.parseInt(quantity));
             } catch (InvalidItemException e) {
-                System.out.println("Re-Enter quantity of item : ");
+                System.out.println(RE_ENTER_QUANTITY_OF_ITEM);
                 flag = true;
             }
         }
@@ -142,7 +150,7 @@ public class ItemManager {
      * @param item
      */
     private void enterItemType(Item item) {
-        System.out.println("Enter type of item [ Raw , Manufactured , Imported ] : ");
+        System.out.println(ENTER_TYPE_OF_ITEM_RAW_MANUFACTURED_IMPORTED);
         boolean flag = true;
         while (flag) {
             String type = scan.nextLine();
@@ -151,7 +159,7 @@ public class ItemManager {
                 flag = false;
                 item.setItemType(type);
             } catch (InvalidItemException e) {
-                System.out.println("Re-Enter type of item [ Raw , Manufactured , Imported ] : ");
+                System.out.println(RE_ENTER_TYPE_OF_ITEM_RAW_MANUFACTURED_IMPORTED);
                 flag = true;
             }
         }
