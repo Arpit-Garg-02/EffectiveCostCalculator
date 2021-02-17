@@ -37,7 +37,7 @@ public class ItemManager {
             ItemValidation validate = new ItemValidation();
             try {
                 validate.compulsoryArgument(name);
-            } catch (Exception e) {
+            } catch (InvalidItemException e) {
                 System.out.println("re-Enter name of item : ");
                 name = scan.nextLine();
             }
@@ -45,7 +45,7 @@ public class ItemManager {
             String price = scan.nextLine();
             try {
                 validate.priceValidate(price);
-            } catch (Exception e) {
+            } catch (InvalidItemException e) {
                 System.out.println("Re-Enter price of item : ");
                 price = scan.nextLine();
             }
@@ -53,7 +53,7 @@ public class ItemManager {
             String quantity = scan.nextLine();
             try {
                 validate.quantityValidate(quantity);
-            } catch (Exception e) {
+            } catch (InvalidItemException e) {
                 System.out.println("Re-Enter quantity of item : ");
                 quantity = scan.nextLine();
             }
@@ -61,7 +61,7 @@ public class ItemManager {
             String type = scan.nextLine();
             try {
                 validate.validateTypeOption(type);
-            } catch (Exception e) {
+            } catch (InvalidItemException e) {
                 System.out.println("Re-Enter type of item [ Raw , Manufactured , Imported ] : ");
                 type = scan.nextLine();
             }

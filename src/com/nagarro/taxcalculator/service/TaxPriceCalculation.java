@@ -13,7 +13,8 @@
 *
 * Last updated Date: 17/Feb/2021
 *
-* Description: An interface that is inherited by RawItemServiceImpl, ManufacturedItemServiceImpl, ImportedItemServiceImpl
+* Description: TaxPriceCalculation is inherited by RawItemServiceImpl, ManufacturedItemServiceImpl, 
+* ImportedItemServiceImpl to calculate tax price
 */
 package com.nagarro.taxcalculator.service;
 
