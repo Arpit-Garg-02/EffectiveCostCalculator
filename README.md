@@ -1,2 +1,2 @@
 # EffectiveCostCalculator
-https://github.com/Arpit-Garg-02/EffectiveCostCalculator
+https://github.com/Arpit-Garg-02/TaxCalculator
