@@ -21,21 +21,18 @@ import com.nagarro.taxcalculator.exception.InvalidItemException;
 import com.nagarro.taxcalculator.utility.ItemNameUtility;
 
 public class ItemValidation {
-    /**
-     * validate the item name
-     */
+    /* validate the item name */
     public void compulsoryArgument(String itemInfo) {
         if (itemInfo.isEmpty()) {
             throw new InvalidItemException("name option must be the first option!");
         }
+        // Check item name all character are alphabets or not
         if (new ItemNameUtility().isNameContainsOnlyAlphabet(itemInfo)) {
             throw new InvalidItemException("Name must contains alphabets!");
         }
     }
 
-    /**
-     * validate the quantity is an integer or not
-     */
+    /* validate the quantity is an integer or not */
     public void quantityValidate(String quantity) {
         try {
             Integer.parseInt(quantity);
@@ -44,9 +41,7 @@ public class ItemValidation {
         }
     }
 
-    /**
-     * validate the price of the item
-     */
+    /* validate the price of the item */
     public void priceValidate(String price) {
         try {
             Double.parseDouble(price);
@@ -55,9 +50,7 @@ public class ItemValidation {
         }
     }
 
-    /**
-     * validate the item type
-     */
+    /* validate the item type */
     public void validateTypeOption(String itemType) {
         if (itemType.isEmpty()) {
             throw new InvalidItemException("Type must be a value!");

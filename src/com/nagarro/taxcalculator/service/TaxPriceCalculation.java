@@ -18,8 +18,6 @@
 package com.nagarro.taxcalculator.service;
 
 public interface TaxPriceCalculation {
-    /**
-     * tax price calculation method
-     */
+    /* Calculate the tax price of an item */
     double taxPrice(double itemPrice, int itemQuantity);
 }

@@ -17,6 +17,7 @@
 */
 package com.nagarro.taxcalculator.item;
 
+/* Item class is used to save the information on an item */
 public class Item {
     private String name;
     private String itemType;

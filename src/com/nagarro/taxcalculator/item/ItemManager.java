@@ -27,9 +27,7 @@ import com.nagarro.taxcalculator.validate.ItemValidation;
 public class ItemManager {
     private ArrayList<Item> itemsInfo = new ArrayList<>();
 
-    /**
-     * Used for user input and validate the all inputs
-     */
+    /* Used for user input and validate the all input */
     public void startManager() throws InvalidItemException {
         char ch;
         do {
@@ -78,9 +76,7 @@ public class ItemManager {
         displayItems(itemsInfo);
     }
 
-    /**
-     * Display the details of the item
-     */
+    /* Display the details of the item */
     private void displayItems(ArrayList<Item> itemInfo) {
         System.out.println("---------------------------------------------------------------------------------------");
         System.out.printf("%10s %10s %15s %15s %15s %15s", "Name", "Price", "Quantity", "Type", "Sales Tax",

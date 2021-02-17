@@ -26,9 +26,7 @@ import com.nagarro.taxcalculator.service.impl.ManufacturedItemTaxPriceCalculatio
 import com.nagarro.taxcalculator.service.impl.RawItemTaxPriceCalculationImpl;
 
 public class PriceCalculationService {
-    /**
-     * Calculate the tax price according to the item type
-     */
+    /* Calculate the tax price according to the item type */
     public void taxCalculation(ArrayList<Item> itemsInfo) {
         for (Item item : itemsInfo) {
             String type = item.getItemType();

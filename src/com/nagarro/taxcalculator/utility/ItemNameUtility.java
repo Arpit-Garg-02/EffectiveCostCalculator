@@ -18,6 +18,7 @@
 package com.nagarro.taxcalculator.utility;
 
 public class ItemNameUtility {
+    /* Check item name contains all alphabet */
     public boolean isNameContainsOnlyAlphabet(String itemName) {
         if ((itemName != null) && (!itemName.equals("")) && (itemName.matches("^[a-zA-Z]*$"))) {
             return false;

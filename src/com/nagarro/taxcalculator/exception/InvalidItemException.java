@@ -18,9 +18,7 @@
 package com.nagarro.taxcalculator.exception;
 
 public class InvalidItemException extends RuntimeException {
-    /**
-     * This method is used to give the error message if any exception occurs
-     */
+    /* This method is used to give the error message if any exception occurs */
     public InvalidItemException(String exceptionMessage) {
         System.out.println("Exception :" + exceptionMessage);
     }
