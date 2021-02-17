@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.nagarro.taxcalculator.exception.InvalidItemException;
-import com.nagarro.taxcalculator.service.pricecalculation.PriceCalculationService;
+import com.nagarro.taxcalculator.service.ItemTaxPriceCalculation;
 import com.nagarro.taxcalculator.validate.ItemValidation;
 
 public class ItemManager {
@@ -34,9 +34,8 @@ public class ItemManager {
             Scanner scan = new Scanner(System.in);
             System.out.println("Enter name of item : ");
             String name = scan.nextLine();
-            ItemValidation validate = new ItemValidation();
             try {
-                validate.compulsoryArgument(name);
+                new ItemValidation().compulsoryArgument(name);
             } catch (InvalidItemException e) {
                 System.out.println("re-Enter name of item : ");
                 name = scan.nextLine();
@@ -44,7 +43,7 @@ public class ItemManager {
             System.out.println("Enter price of item : ");
             String price = scan.nextLine();
             try {
-                validate.priceValidate(price);
+                new ItemValidation().priceValidate(price);
             } catch (InvalidItemException e) {
                 System.out.println("Re-Enter price of item : ");
                 price = scan.nextLine();
@@ -52,7 +51,7 @@ public class ItemManager {
             System.out.println("Enter quantity of item : ");
             String quantity = scan.nextLine();
             try {
-                validate.quantityValidate(quantity);
+                new ItemValidation().quantityValidate(quantity);
             } catch (InvalidItemException e) {
                 System.out.println("Re-Enter quantity of item : ");
                 quantity = scan.nextLine();
@@ -60,19 +59,17 @@ public class ItemManager {
             System.out.println("Enter type of item [ Raw , Manufactured , Imported ] : ");
             String type = scan.nextLine();
             try {
-                validate.validateTypeOption(type);
+                new ItemValidation().validateTypeOption(type);
             } catch (InvalidItemException e) {
                 System.out.println("Re-Enter type of item [ Raw , Manufactured , Imported ] : ");
                 type = scan.nextLine();
             }
             String itemInfo[] = new String[] { name, price, quantity, type };
-            Item item = new Item(itemInfo);
-            itemsInfo.add(item);
+            itemsInfo.add(new Item(itemInfo));
             System.out.println("Do you want to enter details of any other item (y/n):");
             ch = scan.next().charAt(0);
         } while (ch == 'y');
-        PriceCalculationService priceCal = new PriceCalculationService();
-        priceCal.taxCalculation(itemsInfo);
+        new ItemTaxPriceCalculation().taxCalculation(itemsInfo);
         displayItems(itemsInfo);
     }
 
@@ -89,6 +86,5 @@ public class ItemManager {
             System.out.println();
         }
         System.out.println("---------------------------------------------------------------------------------------");
-
     }
 }

@@ -15,9 +15,9 @@
 *
 * Description: Calculate the tax price for the raw item type
 */
-package com.nagarro.taxcalculator.service.impl;
+package com.nagarro.taxcalculator.service.pricecalculation.impl;
 
-import com.nagarro.taxcalculator.service.TaxPriceCalculation;
+import com.nagarro.taxcalculator.service.pricecalculation.TaxPriceCalculation;
 
 public class RawItemTaxPriceCalculationImpl implements TaxPriceCalculation {
     @Override

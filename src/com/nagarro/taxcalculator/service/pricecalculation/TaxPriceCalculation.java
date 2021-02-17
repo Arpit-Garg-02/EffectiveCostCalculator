@@ -16,7 +16,7 @@
 * Description: TaxPriceCalculation is inherited by RawItemServiceImpl, ManufacturedItemServiceImpl, 
 * ImportedItemServiceImpl to calculate tax price
 */
-package com.nagarro.taxcalculator.service;
+package com.nagarro.taxcalculator.service.pricecalculation;
 
 public interface TaxPriceCalculation {
     /* Calculate the tax price of an item */
