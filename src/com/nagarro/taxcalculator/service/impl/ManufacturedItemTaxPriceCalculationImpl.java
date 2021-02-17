@@ -1,5 +1,5 @@
 /*
-* Class name: ManufacturedItemServiceImpl
+* Class name: ManufacturedItemTaxPriceCalculationImpl
 *
 * Version info: jdk 1.8
 *

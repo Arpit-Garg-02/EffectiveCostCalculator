@@ -46,7 +46,7 @@ public class PriceCalculationService {
                 service = new ImportedItemTaxPriceCalculationImpl();
                 break;
             }
-            double taxPrice = service.taxPriceCalculation(itemsPrice, itemsQuantity);
+            double taxPrice = service.taxPrice(itemsPrice, itemsQuantity);
             item.setTaxPrice(taxPrice);
         }
     }
