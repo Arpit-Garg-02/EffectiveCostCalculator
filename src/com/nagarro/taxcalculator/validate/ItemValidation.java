@@ -18,6 +18,7 @@
 package com.nagarro.taxcalculator.validate;
 
 import com.nagarro.taxcalculator.exception.InvalidItemException;
+import com.nagarro.taxcalculator.utility.StringUtility;
 
 public class ItemValidation {
     /**
@@ -25,7 +26,10 @@ public class ItemValidation {
      */
     public void compulsoryArgument(String itemInfo) {
         if (itemInfo.isEmpty()) {
-            throw new InvalidItemException("name option must be the first option !");
+            throw new InvalidItemException("name option must be the first option!");
+        }
+        if (new StringUtility().isStringOnlyAlphabet(itemInfo)) {
+            throw new InvalidItemException("Name must contains alphabets!");
         }
     }
 
