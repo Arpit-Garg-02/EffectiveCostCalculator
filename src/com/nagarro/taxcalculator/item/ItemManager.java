@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.nagarro.taxcalculator.exception.InvalidItemException;
-import com.nagarro.taxcalculator.service.PriceCalculationService;
+import com.nagarro.taxcalculator.service.pricecalculation.PriceCalculationService;
 import com.nagarro.taxcalculator.validate.ItemValidation;
 
 public class ItemManager {

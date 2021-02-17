@@ -15,11 +15,12 @@
 *
 * Description: Calculate the tax price according to the item type
 */
-package com.nagarro.taxcalculator.service;
+package com.nagarro.taxcalculator.service.pricecalculation;
 
 import java.util.ArrayList;
 
 import com.nagarro.taxcalculator.item.Item;
+import com.nagarro.taxcalculator.service.ServiceImpl;
 import com.nagarro.taxcalculator.service.impl.ImportedItemServiceImpl;
 import com.nagarro.taxcalculator.service.impl.ManufacturedItemServiceImpl;
 import com.nagarro.taxcalculator.service.impl.RawItemServiceImpl;
