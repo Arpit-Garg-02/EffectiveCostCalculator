@@ -20,10 +20,10 @@ package com.nagarro.taxcalculator.service.pricecalculation;
 import java.util.ArrayList;
 
 import com.nagarro.taxcalculator.item.Item;
-import com.nagarro.taxcalculator.service.ServiceImpl;
-import com.nagarro.taxcalculator.service.impl.ImportedItemServiceImpl;
-import com.nagarro.taxcalculator.service.impl.ManufacturedItemServiceImpl;
-import com.nagarro.taxcalculator.service.impl.RawItemServiceImpl;
+import com.nagarro.taxcalculator.service.TaxPriceCalculation;
+import com.nagarro.taxcalculator.service.impl.ImportedItemTaxPriceCalculationImpl;
+import com.nagarro.taxcalculator.service.impl.ManufacturedItemTaxPriceCalculationImpl;
+import com.nagarro.taxcalculator.service.impl.RawItemTaxPriceCalculationImpl;
 
 public class PriceCalculationService {
     /**
@@ -34,16 +34,16 @@ public class PriceCalculationService {
             String type = item.getItemType();
             double itemsPrice = item.getItemPrice();
             int itemsQuantity = item.getItemQuantity();
-            ServiceImpl service = null;
+            TaxPriceCalculation service = null;
             switch (type) {
             case "Raw":
-                service = new RawItemServiceImpl();
+                service = new RawItemTaxPriceCalculationImpl();
                 break;
             case "Manufactured":
-                service = new ManufacturedItemServiceImpl();
+                service = new ManufacturedItemTaxPriceCalculationImpl();
                 break;
             case "Imported":
-                service = new ImportedItemServiceImpl();
+                service = new ImportedItemTaxPriceCalculationImpl();
                 break;
             }
             double taxPrice = service.taxPriceCalculation(itemsPrice, itemsQuantity);

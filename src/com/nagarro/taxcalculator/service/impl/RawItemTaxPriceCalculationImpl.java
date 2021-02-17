@@ -17,11 +17,11 @@
 */
 package com.nagarro.taxcalculator.service.impl;
 
-import com.nagarro.taxcalculator.service.ServiceImpl;
+import com.nagarro.taxcalculator.service.TaxPriceCalculation;
 
-public class RawItemServiceImpl implements ServiceImpl {
+public class RawItemTaxPriceCalculationImpl implements TaxPriceCalculation {
     @Override
-    public double taxPriceCalculation(double itemPrice, int itemQuantity) {
+    public double taxPrice(double itemPrice, int itemQuantity) {
         return itemPrice * .125;
     }
 }
