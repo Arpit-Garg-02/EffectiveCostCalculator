@@ -13,7 +13,7 @@
 *
 * Last updated Date: 16/Feb/2021
 *
-* Description: Model class of the project
+* Description: Model class of the TaxCalculator
 */
 package com.nagarro.taxcalculator.model;
 

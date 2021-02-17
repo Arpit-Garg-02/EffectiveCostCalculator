@@ -25,7 +25,7 @@ import com.nagarro.taxcalculator.service.PriceCalculationService;
 import com.nagarro.taxcalculator.validate.ItemValidation;
 
 public class ItemManager {
-    public static ArrayList<Item> itemsInfo = new ArrayList<>();
+    private ArrayList<Item> itemsInfo = new ArrayList<>();
 
     /**
      * Used for user input and validate the all inputs
