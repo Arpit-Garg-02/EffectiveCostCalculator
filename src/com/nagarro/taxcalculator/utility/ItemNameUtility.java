@@ -1,5 +1,5 @@
 /*
-* Class name: RawItemServiceImpl
+* Class name: ItemNameUtility
 *
 * Version info: jdk 1.8
 *
@@ -17,7 +17,7 @@
 */
 package com.nagarro.taxcalculator.utility;
 
-public class StringUtility {
+public class ItemNameUtility {
     public boolean isNameContainsOnlyAlphabet(String itemName) {
         if ((itemName != null) && (!itemName.equals("")) && (itemName.matches("^[a-zA-Z]*$"))) {
             return false;
