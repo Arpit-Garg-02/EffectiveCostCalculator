@@ -15,11 +15,17 @@
 *
 * Description: String utility class is used to check the item name contains alphabet
 */
-package com.nagarro.taxcalculator.utility;
+package com.nagarro.taxcalculator.utils;
 
-public class ItemNameUtility {
-    /* Check item name contains all alphabet */
+public class StringValidationUtil {
+    /**
+     * Check item name contains all alphabet
+     * 
+     * @param itemName
+     * @return true is string is valid
+     */
     public boolean isNameContainsOnlyAlphabet(String itemName) {
         return ((itemName != null) && (!itemName.equals("")) && (itemName.matches("^[a-zA-Z]*$"))) ? false : true;
     }
+
 }

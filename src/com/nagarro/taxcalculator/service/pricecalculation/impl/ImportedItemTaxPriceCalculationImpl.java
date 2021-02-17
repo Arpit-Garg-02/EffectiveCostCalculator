@@ -20,6 +20,13 @@ package com.nagarro.taxcalculator.service.pricecalculation.impl;
 import com.nagarro.taxcalculator.service.pricecalculation.TaxPriceCalculation;
 
 public class ImportedItemTaxPriceCalculationImpl implements TaxPriceCalculation {
+    /**
+     * Calculate the tax price of Imported item type
+     * 
+     * @param itemPrice
+     * @param itemQuantity
+     * @return return tax price of Imported item
+     */
     @Override
     public double taxPrice(double itemPrice, int itemQuantity) {
         double importedTax = itemPrice * .01;

@@ -15,7 +15,7 @@
 *
 * Description: Details of an item
 */
-package com.nagarro.taxcalculator.item;
+package com.nagarro.taxcalculator.model;
 
 /* Item class is used to save the information on an item */
 public class Item {
@@ -25,53 +25,89 @@ public class Item {
     private int quantity;
     private double taxPrice;
 
-    Item(String[] itemsInfo) {
-        this.name = itemsInfo[0];
-        this.price = Double.parseDouble(itemsInfo[1]);
-        this.quantity = Integer.parseInt(itemsInfo[2]);
-        this.itemType = itemsInfo[3];
-    }
-
+    /**
+     * Set the name of the item
+     * 
+     * @param name
+     */
     public void setItemName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return item name
+     */
     public String getItemName() {
         return this.name;
     }
 
+    /**
+     * set the type of the item
+     * 
+     * @param name
+     */
     public void setItemType(String itemType) {
         this.itemType = itemType;
     }
 
+    /**
+     * @return item type
+     */
     public String getItemType() {
         return this.itemType;
     }
 
+    /**
+     * set the price of item
+     * 
+     * @param price
+     */
     public void setItemPrice(double price) {
         this.price = price;
     }
 
+    /**
+     * @return price
+     */
     public double getItemPrice() {
         return this.price;
     }
 
+    /**
+     * set quantity of item
+     * 
+     * @param quantity
+     */
     public void setItemQuantity(int quantity) {
         this.quantity = quantity;
     }
 
+    /**
+     * @return quantity
+     */
     public int getItemQuantity() {
         return this.quantity;
     }
 
+    /**
+     * Set tax price of item
+     * 
+     * @param taxPrice
+     */
     public void setTaxPrice(double taxPrice) {
         this.taxPrice = taxPrice;
     }
 
+    /**
+     * @return taxPrice
+     */
     public double getTaxPrice() {
         return this.taxPrice;
     }
 
+    /**
+     * @return
+     */
     public double getTotalTax() {
         return getTaxPrice() + getItemPrice();
     }

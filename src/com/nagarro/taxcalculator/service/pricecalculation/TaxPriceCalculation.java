@@ -19,6 +19,12 @@
 package com.nagarro.taxcalculator.service.pricecalculation;
 
 public interface TaxPriceCalculation {
-    /* Calculate the tax price of an item */
+    /**
+     * Calculate the tax price of item
+     * 
+     * @param itemPrice
+     * @param itemQuantity
+     * @return return tax price
+     */
     double taxPrice(double itemPrice, int itemQuantity);
 }

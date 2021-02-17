@@ -18,21 +18,31 @@
 package com.nagarro.taxcalculator.validate;
 
 import com.nagarro.taxcalculator.exception.InvalidItemException;
-import com.nagarro.taxcalculator.utility.ItemNameUtility;
+import com.nagarro.taxcalculator.utils.StringValidationUtil;
 
 public class ItemValidation {
-    /* validate the item name */
-    public void compulsoryArgument(String itemInfo) {
+    /**
+     * Check item name is valid or not empty
+     * 
+     * @param itemInfo
+     * @return true, if name is not empty
+     */
+    public void isValidStringInput(String itemInfo) {
         if (itemInfo.isEmpty()) {
             throw new InvalidItemException("name option must be the first option!");
         }
         // Check item name all character are alphabets or not
-        if (new ItemNameUtility().isNameContainsOnlyAlphabet(itemInfo)) {
+        if (new StringValidationUtil().isNameContainsOnlyAlphabet(itemInfo)) {
             throw new InvalidItemException("Name must contains alphabets!");
         }
     }
 
-    /* validate the quantity is an integer or not */
+    /**
+     * Check item quantity is a number
+     * 
+     * @param quantity
+     * @return true, if quantity is an number
+     */
     public void quantityValidate(String quantity) {
         try {
             Integer.parseInt(quantity);
@@ -41,7 +51,12 @@ public class ItemValidation {
         }
     }
 
-    /* validate the price of the item */
+    /**
+     * Check item price is a number
+     * 
+     * @param price
+     * @return true, if price is an number
+     */
     public void priceValidate(String price) {
         try {
             Double.parseDouble(price);
@@ -50,7 +65,12 @@ public class ItemValidation {
         }
     }
 
-    /* validate the item type */
+    /**
+     * Check item type is Raw, Manufactured, Imported
+     * 
+     * @param itemType
+     * @return InvalidItemException if item type mismatch
+     */
     public void validateTypeOption(String itemType) {
         if (itemType.isEmpty()) {
             throw new InvalidItemException("Type must be a value!");

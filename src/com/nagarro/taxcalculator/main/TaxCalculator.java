@@ -15,11 +15,14 @@
 *
 * Description: Model class of the TaxCalculator
 */
-package com.nagarro.taxcalculator.model;
+package com.nagarro.taxcalculator.main;
 
-import com.nagarro.taxcalculator.item.ItemManager;
+import com.nagarro.taxcalculator.model.ItemManager;
 
-public class TaxCal {
+public class TaxCalculator {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         new ItemManager().startManager();
     }
