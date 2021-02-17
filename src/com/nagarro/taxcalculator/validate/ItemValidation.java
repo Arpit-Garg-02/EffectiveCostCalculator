@@ -28,7 +28,7 @@ public class ItemValidation {
         if (itemInfo.isEmpty()) {
             throw new InvalidItemException("name option must be the first option!");
         }
-        if (new StringUtility().isStringOnlyAlphabet(itemInfo)) {
+        if (new StringUtility().isNameContainsOnlyAlphabet(itemInfo)) {
             throw new InvalidItemException("Name must contains alphabets!");
         }
     }
